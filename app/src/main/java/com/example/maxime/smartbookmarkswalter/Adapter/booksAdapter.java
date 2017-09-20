@@ -20,8 +20,8 @@ import java.util.List;
 public class booksAdapter extends ArrayAdapter<Book>{
 
 
-    public booksAdapter(Context context, List<Book> resource) {
-        super(context, 0,resource);
+    public booksAdapter(Context context, List<Book> books) {
+        super(context, 0, books);
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -46,7 +46,9 @@ public class booksAdapter extends ArrayAdapter<Book>{
 
         //il ne reste plus qu'à remplir notre vue
         viewHolder.Title.setText(book.getTitle());
-        viewHolder.NbComment.setText(book.getComment());
+
+        String comment =  String.valueOf(book.getComment());
+        viewHolder.NbComment.setText(comment);
         viewHolder.Style.setText(book.getStyle());
         viewHolder.Author.setText(book.getAuthor());
 

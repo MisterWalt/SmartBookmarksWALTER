@@ -52,6 +52,7 @@ public class activity_books extends AppCompatActivity {
                 newBook.setTitle(curs.getString(1));
                 newBook.setAuthor(curs.getString(2));
                 newBook.setStyle(curs.getString(3));
+
                 newBook.setComment(1000);
 
 
